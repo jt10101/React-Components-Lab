@@ -1,11 +1,12 @@
 import RenderImage from "../WeatherIcon/WeatherIcon";
+import RenderData from "../WeatherData/WeatherData";
 import "./WeatherForecast.css";
 
-function RenderDayWeather({ day, img, imgAlt, time, conditions }) {
+function RenderForecast({ day, img, imgAlt, time, conditions }) {
   return (
     <div className="weather">
-      <h2>{day}</h2>
-      {/* <img src={img} alt={imgAlt} /> */}
+      {/* <h2>{day}</h2> */}
+      <RenderData day={day} />
       <RenderImage img={img} imgAlt={imgAlt} />
 
       <p>
@@ -18,4 +19,4 @@ function RenderDayWeather({ day, img, imgAlt, time, conditions }) {
   );
 }
 
-export default RenderDayWeather;
+export default RenderForecast;

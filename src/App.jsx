@@ -1,7 +1,6 @@
 // src/App.jsx
 
-import RenderDayWeather from "./components/WeatherForecast/WeatherForecast";
-import RenderImage from "./components/WeatherIcon/WeatherIcon";
+import RenderForecast from "./components/WeatherForecast/WeatherForecast";
 
 const App = () => {
   const weatherForecasts = [
@@ -50,16 +49,18 @@ const App = () => {
   return (
     <>
       <h1>Local Weather</h1>
-      {weatherForecasts.map((entry) => (
-        <RenderDayWeather
-          key={entry.dayId}
-          day={entry.day}
-          img={entry.img}
-          imgAlt={entry.imgAlt}
-          conditions={entry.conditions}
-          time={entry.time}
-        />
-      ))}
+      <section>
+        {weatherForecasts.map((entry) => (
+          <RenderForecast
+            key={entry.dayId}
+            day={entry.day}
+            img={entry.img}
+            imgAlt={entry.imgAlt}
+            conditions={entry.conditions}
+            time={entry.time}
+          />
+        ))}
+      </section>
     </>
   );
 };
