@@ -1,15 +1,17 @@
 import "./WeatherForecast.css";
-export default function RenderDayWeather({ day }) {
+function RenderDayWeather({ day, img, imgAlt, time, conditions }) {
   return (
     <div className="weather">
       <h2>{day}</h2>
-      <img src="" alt="" />
+      <img src={img} alt={imgAlt} />
       <p>
-        <span>conditions: </span>current weather conditions
+        <span>conditions: {conditions} </span>
       </p>
       <p>
-        <span>time: </span>time of day
+        <span>time: {time}</span>
       </p>
     </div>
   );
 }
+
+export default RenderDayWeather;
