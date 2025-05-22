@@ -1,5 +1,5 @@
 const RenderImage = ({ img, imgAlt }) => {
-  return <img src={img} alt="" />;
+  return <img src={img} alt={imgAlt} />;
 };
 
 export default RenderImage;

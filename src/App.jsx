@@ -1,5 +1,7 @@
 // src/App.jsx
+
 import RenderDayWeather from "./components/WeatherForecast/WeatherForecast";
+import RenderImage from "./components/WeatherIcon/WeatherIcon";
 
 const App = () => {
   const weatherForecasts = [
